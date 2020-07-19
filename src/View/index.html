@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RooMate | Video Chat</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="application">
+        <div class="header">
+            <div class="header__brand">
+                <h1 class="header__brand-text">rooMate</h1>
+            </div>
+
+            <div class="header__fullscreen">
+                <button id="header__fullscreen-btn" class="header__fullscreen-btn">
+                    <span class="material-icons">
+                        fullscreen
+                    </span>
+                </button>
+            </div>
+
+            <div class="header__settings">
+                <button id="header__settings-btn" class="header__settings-btn">
+                    <span class="material-icons">
+                        settings
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div id="content-screen" class="content d-none">
+            <div class="media">
+                <div class="media__remote-container">
+                    <video id="remote-media" autoplay playsinline></video>
+                </div>
+                <div class="media__local-container">
+                    <div class="media__local-control">
+                        <button id="microphone" class="media__local-audio-btn control-btn">
+                            <span class="material-icons">mic</span>
+                        </button>
+                    </div>
+                    <div class="media__local-video">
+                        <video id="local-media" autoplay playsinline muted></video>
+                    </div>
+                    <div class="media__local-call">
+                        <div id="disconnect" class="media__local-call-end-btn control-btn">
+                            <span class="material-icons">call_end</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div id="chat-container" class="chat__messages">
+                    <!-- Chat Messages -->
+                </div>
+                <form class="chat__input" onsubmit="return false">
+                    <input autocomplete="off" id="chat-input" autofocus type="text" placeholder="Text Message...">
+                    <button id="chat-send-btn" type="submit"><span class="material-icons">send</span></button>
+                </form>
+            </div>
+        </div>
+        <div id="loader-screen" class="loader d-none">
+            <label>Please Wait</label>
+        </div>
+        <div id="startup-screen" class="startup ">
+            <button id="find-roomate__btn" class="find-roomate__btn" type="button">find roomate</button>
+        </div>
+
+        <button type="button" class="debug-btn" id="debug-btn"><span class="material-icons">bug_report</span></button>
+        <button type="button" class="debug-btn" id="chat-btn"><span class="material-icons">chat</span></button>
+
+        <div id="debug" class="debug d-none"></div>
+    </div>
+
+
+    <script> </script>
+</body>
+</html>
